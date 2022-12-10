@@ -1,0 +1,32 @@
+<div class="container mt-5">
+    <h2 class="text-center">User Details</h2>
+  <table class="table align-middle mb-0 bg-white">
+    <thead class="bg-light">
+      <tr>
+        <th>Id</th>
+        <th>UserName</th>
+        <th>Email</th>
+        <th>ContactNumber</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody> 
+      
+      <tr  *ngFor="let user of users; let i=index">
+        <td>{{i+1}}</td>
+        <td>{{user.username}}</td>
+        <td>{{user.email}}</td>
+        <td>{{user.contactNumber}}</td>
+        <td><button class="btn btn-info me-2" (click)="onViewUser()">View</button>
+        <button class="btn btn-info me-2">Edit</button> 
+        <button class="btn btn-danger me-2">Delete</button> 
+      </td>          
+          <!-- <button (click)="onDeleteUser(user?.id)" type="button" class="btn btn-v">Delete</button> -->
+        
+          <!-- <button type="button" class="btn btn-secondary">Edit</button> -->
+       
+        <!-- </td> -->
+      </tr>
+    </tbody>
+  </table>
+  </div>
